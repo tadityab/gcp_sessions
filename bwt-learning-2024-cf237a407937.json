@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "bwt-learning-2024",
+  "private_key_id": "cf237a40793739203a9e948755df08368b1a6d8f",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDM86vsJiHZ+kXk\nZTZTMi7xIQKT0EgCHZJ/2uo65s7rKxE2Kpxg9O9p9prrf8RKosRhMprw7S67i09u\nxsdars6k9itVXUktEN/KNtAi4gmO2bb3OQMC8Vhh6aDES342vTycj91fDJvy0+E5\n56sL9JN9gUqTt8sVepEYmXNPOoJOrG8fdqVKqs3b51yBSszYsJmpl/74jRsffK8w\nxPXxAZ2DMrvMdDUqoIMp/M5JdyFurvdR06PEvtFe138+IL/bxjL2L8V5OSdfSEwR\n+IztYlBhplobKgasTkuxDMOR10mkRpRsj/glE0Y9SQf/66iJNycVnrJROqix3e2M\nhg0rqEZpAgMBAAECggEAA/uKMDUPfFZeLFGBLD2x5tKe47Ns6smbUqu02H8qrywv\nke9jCYlI67S0jvX1IQQnr8HVe/AH8/IBkaQANLVn45G7BtYguWT2DE5jXgIpcGKv\nqP8tHU4GSyTIkHftFHA58Mrk4Nd0YlQWsNLdIobWpN4xzkwIgLrYffNhZ7050gCD\n3FL/htaoQCI8IwKM6ETtD/zI7ZNS77wYkO5VoAgQ/5uAXJ46rBG0RAS8LOprIqVX\nf0+ytxCHkqYcY77SFYTEV7UuRUMxfhi1K98Xcka5Ip7roisq7jzS8toTC7msBCQv\n/1OU6xKaRPvSpExpv7dQIJGF1PwxHnXjVAtEoKUG3wKBgQD3u8IWgeuJC8VM+VNQ\n3jMibyMcpDMk5fwDpKAskzWOMTEsY5T+tk6iCKJvSzn4MCs95x6fWTtVgZMxx7qR\nS+1ay33pmhkHUNa2oI/TwxpOAcMVMwEFOrrS88nHzghFCdgHpqV612nduSFGWar3\nCVlCajmiOf7WqXjb4qoN5T/OTwKBgQDTynSQBevG6l6DeI0Pdqdpk4ob2XofbA2G\ndCRF00FZdkpV/oN9J1qOd0oMpRE6UWpEMN/UUr0mMY7foi3uKsN2rUDJ/f1MH0oH\ngaOO+jQGht/mtfHn7tyBWQxTjPyZ5hNCMQtOorB5yWNvNN2uW5HwWkCytwpZMEvI\nZ7RC1efpxwKBgHKTxW2xgyVsa0Fxo0Yors/DRSMPEpSDRi7NKkPThhaQy+Ry3kt8\nOBwbED2XNmWCqc1EotYiaB3hAxon/TMMQegXa9HqMp8+lT/8POk9OGJR0E9yuosX\noabFmFKwCQUdS2wmeCy7irxAzpICEN+W1FCyXpuYZTQVR8+zIuGwYPVjAoGACJOk\nUMjMmYuYND7Hh57IfNAKwcH23hrkGVPOvD0n4lWWARGDhaf4VNij2Qs+PVxar1RD\nXDfVjRxoqsnIjmKQ89dkTknI3jJOLyui0gFz5efEXXV0zG2x5FMU2rVU7W6RzRZr\nXM3d07DCJBjB+XOf31noUNR0yNPZ3c3FUQeUkrUCgYB2gD4V4MDXM0tvJCtREfg7\nJn6RmfVhQtF8Fgl2J+s5JsSQAeNZM3ODbcxIqerhIxY2vheEuHHr/WeJEodx0a6S\nYPctVcLAa0XqxjOhyN3YsDMPU31kXqVDWcGoRY/ujo88c1nTTJOHehGK0U1VX6fk\naeOxpCaQZ/hrhHpRdw2LYw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "bwt-storage-service-account@bwt-learning-2024.iam.gserviceaccount.com",
+  "client_id": "111125294120576227062",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/bwt-storage-service-account%40bwt-learning-2024.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
