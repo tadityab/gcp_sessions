@@ -6,6 +6,22 @@
 # meaning you only retain the latest information.
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import coalesce
+import os
+
+# Using below block dynamically defining input and output location present in project.
+# Get parent folder  location,
+current_folder = os.path.dirname(os.path.abspath(__file__))
+
+# Get parent folder name
+parent_folder = os.path.dirname(current_folder)
+
+# Initialize input location.
+existing_file = f"{parent_folder}/inputdata/employee.csv"
+new_file = f"{parent_folder}/inputdata/employee_new.csv"
+
+# Initialize output location
+output_location = f"{parent_folder}/outputdata/scd1output"
+
 
 if __name__ == '__main__':
     # create a spark session
@@ -13,10 +29,10 @@ if __name__ == '__main__':
         .appName("Transformation SCD1").getOrCreate()
 
     # Reading existing file and create a dataframe
-    existing_df = spark.read.csv(r"D:\GCP2024\gcp_sessions\session\inputdata\employee.csv", header=True)
+    existing_df = spark.read.csv(fr"{existing_file}", header=True)
 
     # Create a dataframe on new file
-    new_df = spark.read.csv(r"D:\GCP2024\gcp_sessions\session\inputdata\employee_new.csv", header=True)
+    new_df = spark.read.csv(fr"{new_file}", header=True)
 
     # join both the dataframe
     joined_df = existing_df.alias("tgt").join(new_df.alias("src"), on="id", how="outer")
@@ -29,4 +45,25 @@ if __name__ == '__main__':
     )
 
     # write a data at target location
-    latest_df.write.mode("overwrite").csv(r"D:\GCP2024\gcp_sessions\session\outputdata\scd1output")
+    latest_df.write.mode("overwrite").csv(fr"{output_location}")
+    print(f"Successfully written output at location : {output_location}")
+
+    # Logic using Spark SQL
+    # Below code will run in Databricks
+    print(f"Currently Running logic using SparkSQL")
+    # Here instead of view create a Delta table.
+    existing_df.createOrReplaceTempView("existing_view")
+    new_df.createOrReplaceTempView("new_view")
+
+    scd1_df = spark.sql("""
+                MERGE INTO existing_view e
+                USING new_view n 
+                ON e.id = n.id 
+                WHEN MATCHED THEN 
+                    UPDATE SET e.name = n.name, e.city=n.city, e.state=n.state
+                WHEN NOT MATCHED THEN 
+                    INSERT (id, name, city, state) 
+                    VALUES (n.id,n.name,n.city,n.state)
+    """)
+
+    scd1_df.write.mode("overwrite").csv(f"{output_location}")
